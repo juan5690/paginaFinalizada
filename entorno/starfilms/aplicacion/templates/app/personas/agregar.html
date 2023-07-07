@@ -1,0 +1,32 @@
+{% extends 'app/base2.html' %}
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <form action="" method="post" enctype="multipart/form-data">
+                    <h2>agregar persona</h2>
+                    <br><br>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    
+                        <input type="submit" value="Guardar" class="btn btn-success">
+                        &nbsp;
+                        <input type="reset" value="Cancelar" class="btn btn-danger">
+                        <a href="{% url 'listar_personas' %}" role="button" class="btn btn-warning text-light">Volver</a>
+                        {{mensaje}}
+                    
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

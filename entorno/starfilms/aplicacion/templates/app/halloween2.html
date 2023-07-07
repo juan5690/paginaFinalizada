@@ -1,0 +1,68 @@
+{% extends 'app/base2.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="ratio ratio-21x9">
+    <iframe src="https://www.youtube.com/embed/oVgtguYmNBg" title="YouTube video" allowfullscreen></iframe>
+</div>
+
+
+<div class="container-fluid">
+</div>
+<div class="bg-gainsboro p-2"></div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <img src="{% static 'app/IMAGENES/caartelera 1.jpg' %}" class="img-fluid">
+
+        </div>
+
+        <div class="col-md-6">
+
+            <h2>HALLOWEEN (1973)</h2>
+
+            <p>El pequeño Michael Myers asesina a su hermana en la noche de Halloween de 1973,
+                por lo que es internado en un psiquiátrico. Seis años más tarde, Myers se escapa del hospital y
+                regresa a su pueblo natal, Haddonfield, en Illinois. El psicópata dará comienzo a una serie de
+                horripilantes asesinatos mientras uno de los médicos que lo trataba en el hospital le sigue la
+                pista.</p>
+            <h2>Creditos y reparto</h2>
+            <div id="ContentPlaceHolder1_ctl_sinopsis_div_propiedades">
+                <p class="bolder cf"><span>Actores: </span><small>Jamie Lee, Donald Pleasence, P.J Soles, Nancy
+                        Loome</small></p>
+                <p class="bolder cf"><span>Directores: </span><small>Jhon Carpenter</small></p>
+            </div>
+
+            <a href="{% url 'agregar_boleto2' %}" class="btn btn-primary">Compra tu entrada aquí</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="marquee marquee--borders" style="--duration: 100s">
+</div>
+
+<div class="marquee">
+    <div class="marquee__group">
+        <img src="{% static 'app/IMAGENES/halloween1.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/halloween2.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/halloween3.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/halloween4.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/halloween5.jpeg' %}" alt=''>
+    </div>
+
+</div>
+
+<div class="marquee marquee--borders" style="--duration: 100s">
+</div>
+
+{% endblock %}

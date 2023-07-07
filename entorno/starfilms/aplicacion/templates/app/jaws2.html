@@ -1,0 +1,66 @@
+{% extends 'app/base2.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="ratio ratio-21x9">
+    <iframe src="https://www.youtube.com/embed/rqTjkKHh7xM" title="YouTube video" allowfullscreen></iframe>
+</div>
+
+
+<div class="container-fluid">
+</div>
+<div class="bg-gainsboro p-2"></div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <img src="{% static 'app/IMAGENES/cartelera 4.jpg' %}" class="img-fluid">
+
+        </div>
+
+        <div class="col-md-6">
+
+            <h2>JAWS</h2>
+
+            <p>Un pueblo costero del este de Estados Unidos se ve amenazado por un gigantesco
+                tiburón blanco que ha atacado a varias personas. Este hecho pone en entredicho la seguridad de los
+                bañadores durante la estación veraniega. Por ello, el alcalde de la localidad encomienda la caza
+                del pez al jefe de la policía, un pescador y a un científico quienes se enfrentarán a un animal
+                muy inteligente y violento.</h2>
+            <div id="ContentPlaceHolder1_ctl_sinopsis_div_propiedades">
+                <p class="bolder cf"><span>Actores: </span><small> Steven Spielberg, Peter Benchley, Carl Gottlieb,
+                        Howard Sackler</small></p>
+                <p class="bolder cf"><span>Directores: </span><small> Steven Spielberg</small></p>
+            </div>
+
+            <a href="{% url 'agregar_boleto2' %}" class="btn btn-primary">Compra tu entrada aquí</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="marquee marquee--borders" style="--duration: 100s">
+</div>
+
+<div class="marquee">
+    <div class="marquee__group">
+        <img src="{% static 'app/IMAGENES/jaws1.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/jaws2.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/jaws3.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/jaws4.jpeg' %}" alt=''>
+        <img src="{% static 'app/IMAGENES/jaws5.jpeg' %}" alt=''>
+    </div>
+</div>
+
+<div class="marquee marquee--borders" style="--duration: 100s">
+</div>
+
+{% endblock %}

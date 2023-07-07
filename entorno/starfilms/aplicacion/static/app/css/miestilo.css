@@ -1,0 +1,239 @@
+body {
+    margin: 0%;
+    background-color: gainsboro;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*background-color: rgb(0, 0, 0);*/
+    color: white;
+    text-align: center;
+}
+
+
+
+.logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkgoldenrod;
+    font-size: 5vw;
+}
+
+
+.ejemplomedia {
+    color: white;
+}
+
+@media screen and (max-width: 720px) {
+
+    .ejemplomedia {
+        color: yellow;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .logo {
+        font-family: "damageplan";
+        color: crimson;
+        font-size: 8vw;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .ejemplomedia {
+        color: green;
+    }
+}
+
+/*
+.foto:hover
+{
+    box-shadow: 1px 1px 2px rgb(255, 115, 0), 0 0 25px rgb(255, 166, 0), 0 0 5px rgb(255, 238, 0);
+}
+*/
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.marquee {
+    --duration: 30s;
+    --gap: var(--space);
+
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    transform: skewY(-3deg);
+}
+
+.marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+        animation-play-state: paused;
+    }
+}
+
+.marquee__group img {
+    max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.marquee__group p {
+    background-image: linear-gradient(75deg,
+            hsl(240deg 70% 49%) 0%,
+            hsl(253deg 70% 49%) 11%,
+            hsl(267deg 70% 49%) 22%,
+            hsl(280deg 71% 48%) 33%,
+            hsl(293deg 71% 48%) 44%,
+            hsl(307deg 71% 48%) 56%,
+            hsl(320deg 71% 48%) 67%,
+            hsl(333deg 72% 48%) 78%,
+            hsl(347deg 72% 48%) 89%,
+            hsl(0deg 73% 47%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.marquee--borders {
+    border-block: 5px solid rgb(0, 0, 0);
+    padding-block: 0.75rem;
+}
+
+.marquee--reverse .marquee__group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration) / -2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+
+.auto-style1 {
+    width: 91%;
+}
+
+.auto-style2 {
+    text-align: center;
+    width: 1122px;
+}
+
+.auto-style3 {
+    width: 30px;
+    background-color: lightpink;
+    text-align: center;
+}
+
+.auto-style4 {
+    width: 35px;
+}
+
+.auto-style5 {
+    width: 36px;
+}
+
+.auto-style6 {
+    width: 30px;
+    height: 34px;
+}
+
+.auto-style7 {
+    width: 36px;
+    height: 34px;
+}
+
+.auto-style8 {
+    width: 35px;
+    height: 34px;
+}
+
+.auto-style10 {
+    width: 32px;
+}
+
+.auto-style11 {
+    width: 32px;
+    height: 34px;
+}
+
+.auto-style12 {
+    width: 34px;
+}
+
+.auto-style13 {
+    width: 34px;
+    height: 34px;
+}
+
+.nuevoEstilo1 {
+    border-top-style: solid;
+}
+
+.auto-style14 {
+    width: 35px;
+    height: 34px;
+    text-align: center;
+}
+
+.auto-style15 {
+    width: 35px;
+    text-align: center;
+}
+
+.auto-style16 {
+    text-align: center;
+}
+
+.auto-style17 {
+    width: 34px;
+    text-align: center;
+}
+
+.auto-style18 {
+    width: 32px;
+    text-align: center;
+}
+
+.auto-style19 {
+    width: 36px;
+    text-align: center;
+}
+
+.highlighted {
+    background-color: grey;
+}
+
+</style>< !-- src="jquery/jquery-1.11.1.min.js" --><script type="text/javascript"></script>

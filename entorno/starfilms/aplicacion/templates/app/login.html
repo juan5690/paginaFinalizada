@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'app/css/Login.css' %}">
+
+<body>
+  <form action="action_page.php" method="post">
+      <div class="imgcontainer">
+      <img src="{% static 'app/IMAGENES/starfilms.png' %}" height="300px" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+      <label for="uname" id="nombre"><b>Nombre</b></label>
+      <input type="text"  placeholder="Nombre usuario" name="uname" required>
+
+      <label for="psw" id="pass"><b>Contraseña</b></label>
+      <input type="password" placeholder="Contraseña" name="psw" required>
+
+      {% csrf_token %}
+      <button formaction="{% url 'administrador' %}" type="submit">Ingresar como admin</button>
+      <label>
+          <input type="checkbox" checked="checked" name="remember"> Recordar sesion
+      </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+      <a href="{% url 'inicio_sesion' %}" class="btn btn-danger">Cancelar</a>
+      
+
+      </div>
+  </form>
+
+
+  {% endblock %}

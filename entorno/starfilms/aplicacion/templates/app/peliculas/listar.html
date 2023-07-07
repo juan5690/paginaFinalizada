@@ -1,0 +1,33 @@
+{% extends 'app/base2.html' %}
+
+{% block contenido %}
+
+
+<table class="table table-striped table-hover table-responsive-sm">
+    <h2>Listado de peliculas</h2>
+    <tr>
+        <th>Nombre: </th>
+        <th>credYreparto: </th>
+    </tr>
+    {% for p in pelicula %}
+
+    <tr>
+        <td>{{p.nombrePeli | title }}</td>
+        <td>{{p.credYreparto | title }}</td>
+        <td>
+            <a href="{% url 'eliminarpelicula' p.nombrePeli %}" role="button" class="btn btn-danger text-light">Eliminar</a>
+        </td>
+    </tr>
+    
+
+    {% endfor %}
+</table>
+
+<div class="d-flex justify-content-center align-items-center">
+    <a href="{% url 'administrador' %}" role="button" class="btn btn-success text-light">Menu</a>
+    <a href="{% url 'agregar_pelicula' %}" role="button" class="btn btn-success text-light">Agregar</a>
+</div>
+
+
+
+{% endblock %}
